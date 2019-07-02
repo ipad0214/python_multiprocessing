@@ -3,17 +3,16 @@
 
 
 class ProcessOne:
-    def __init__(self, queue_one, queue_two):
+    def __init__(self, queue_one, queue_two, count):
         self.queue_one = queue_one
         self.queue_two = queue_two
-        self.count = 0
+        self.count = count
 
-        self.queue_two.put("Hello World")
         self.loop()
 
     def loop(self):
         while True:
             if not self.queue_one.empty():
                 print(self.queue_one.get())
-                self.queue_two.put("one: call: {}".format(self.count))
-                self.count += 1
+                self.queue_two.put("one: call: {}".format(self.count.two))
+                self.count.two += 1
